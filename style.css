@@ -1,0 +1,618 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap');
+*{
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Quicksand',sans-serif;
+  transition: 0.2s ease-in-out;
+}
+html{
+  scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    font-family: "Lucida Grande";
+}
+  
+a {
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+.clear {
+    clear: left;
+  }
+
+.container {
+    max-width: 1170px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.top-wrapper {
+    /* padding: 200px 0 200px 0; */
+    /* background-image: url(https://drive.google.com/uc?id=1nBAFxHATL-BwuLS2X0jfXjA4KccmfiUS); */
+    background-image: linear-gradient(
+      rgb(255,255,255, 0.4),
+      rgb(255,255,255, 0.4)
+    ),url(assets/gunungrinjani.jpg);
+    background-size: cover;
+    color: rgb(26, 25, 25);
+    text-align: center;
+}
+/* animasi awan */
+.cloud{
+  padding: 200px 0 200px 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(assets/awan.png);
+  animation: animate-awan 60s linear infinite;
+  z-index: 3;
+}
+@keyframes animate-awan {
+  0%{
+    background-position: 0px;
+  }
+  100%{
+    background-position: 5440px;
+  }
+}
+/* animasi awan */
+
+.top-wrapper h1 {
+    opacity: 0.7; /* membuat transaparan*/
+    font-size: 45px;
+    letter-spacing: 3px; /* jarak antar huruf*/
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.top-wrapper p {
+    opacity: 0.8;
+    margin-bottom: 3px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.btn-wrapper {
+    margin: 20px 0; /*jarak atas dan bawah*/
+}
+
+.btn-wrapper p {
+    margin: 10px 0; /*atas dan bawah*/
+}
+
+/* .signup {
+    background-color: #883628;
+}
+
+.facebook {
+    background-color: #3b5998;
+    margin-right: 10px;
+}
+
+.twitter {
+    background-color: #55acee;
+} */
+
+/*utk tombol mulai belajar*/
+.btn {
+    padding: 12px 24px; /*atas bawah 12px dan kanan kiri 24px*/
+    color: white;
+    display: inline-block;
+    opacity: 0.8;
+    border-radius: 4px;
+}
+
+/*berubah warna tombol ketika kursor diarahkan*/
+.btn:hover {
+    opacity: 1;
+    letter-spacing: 2px;
+}
+
+/*jarak ke kanan icon fb dan twitter*/
+.fa {
+    margin-right: 5px;
+}
+
+header {
+    height: 85px;
+    width: 100%;
+    /* background-color: rgba(36, 114, 71, 0.9);  /*mengatur warna serta transaparansi background pada nav*/
+    /* Ubah position ke fixed, dan top ke 0 */
+    background-color: rgba(255, 255, 255, 0.9);
+    position:fixed;
+    top:0;
+    
+    /* Ubah z-index ke 10 supaya header ditempatkan diatas element tertentu*/
+    z-index: 10;
+}
+
+.logo {
+    width: 124px;
+    /* height: 73px; */
+    margin-top: 7px;
+ }
+
+.header-left {
+  /* line-height: 80px; */
+  float: left;
+}
+  
+.header-mid{
+  display: none;
+  float: right;
+  line-height: 65px;
+}
+
+.header-mid a{
+  color: black;
+  font-size: 24px;
+}
+
+.header-right {
+  line-height: 45px;
+  float: right;
+    /* margin-right: -25px; */
+}
+  
+.header-right li {
+    /* line-height: 65px; */
+    /* display: block; */
+    float: left;
+    /* transition: all 0.5s; */
+}
+
+.header-right a{
+  font-weight: bold;
+}
+  .header-right li a{
+    color: black;
+    padding: 12px 20px;
+    transition: all 0.5s;
+  }
+.header-right li a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-bottom: 4px solid #42bfa6;
+}
+
+/* tulis CSS wisata dibawah */
+.lesson-wrapper-wisata {
+  position: relative;
+    padding-bottom: 80px;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: #f7f7f7;
+    text-align: left;
+    top: -50px;
+    border-radius: 40px;
+  }
+  
+  .heading-wisata {
+    padding-top: 80px;
+    padding-bottom: 50px;
+    color: #5f5d60;
+    text-align: center;
+  }
+  
+  .heading-wisata h2 {
+    font-weight: normal;
+  }
+
+  .heading-wisata hr{
+    width: 100px;
+    border : 2px solid #5f5d60;
+  }
+  
+  .lesson-wisata {
+    float: left;
+    width: 25%;
+    border-radius: 4px;
+    padding: 10px;
+  }
+  
+  .lesson-icon-wisata {
+    position: relative;
+    overflow:hidden;
+    width: 100%;
+  }
+  .lesson-icon-wisata img{
+    height: 50%;
+    object-fit: cover;
+    width: 100%;
+  }
+  .lesson-wisata:hover .lesson-icon-wisata img{
+    transform: scale(1.2);
+  }
+  .lesson-wisata:hover{
+    position: relative;
+    bottom: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+    background-color: white;
+  }
+  .title{
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: black;
+  }
+
+  .stars i{
+    font-size: 1.5rem;
+    color: gold;
+}
+  .content .text-contents-wisata{
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color:#ccc;
+    padding:1rem 0;
+  }
+.btn-wisata{
+  background-color: #42bfa6;
+}
+  /* .lesson-icon-wisata p {
+    position: absolute;
+    top: 44%;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    font-size:20px;
+    font-weight: bold;
+  } */
+  
+  /* .text-contents-wisata {
+    width: 80%;
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 15px;
+    color: #b3aeb5;
+  } */
+
+/* css kuliner */
+
+/* akhir css kuliner */
+.lesson-wrapper-kuliner {
+  position: relative;
+    padding-bottom: 80px;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: #f7f7f7;
+    text-align: left;
+    top: -50px;
+    border-radius: 40px;
+  }
+  
+  .heading-kuliner {
+    padding-top: 80px;
+    padding-bottom: 50px;
+    color: #5f5d60;
+    text-align: center;
+  }
+  
+  .heading-kuliner h2 {
+    font-weight: normal;
+  }
+
+  .heading-kuliner hr{
+    width: 100px;
+    border : 2px solid #5f5d60;
+  }
+  
+  .lesson-kuliner {
+    float: left;
+    width: 25%;
+    border-radius: 4px;
+    padding: 10px;
+  }
+  
+  .lesson-icon-kuliner {
+    position: relative;
+    overflow:hidden;
+    width: 100%;
+  }
+  .lesson-icon-kuliner img{
+    height: 50%;
+    object-fit: cover;
+    width: 100%;
+  }
+  .lesson-kuliner:hover .lesson-icon-kuliner img{
+    transform: scale(1.2);
+  }
+  .lesson-kuliner:hover{
+    position: relative;
+    bottom: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+    background-color: white;
+  }
+  .title{
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: black;
+  }
+
+  .stars i{
+    font-size: 1.5rem;
+    color: gold;
+}
+  .content .text-contents-wisata{
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color:#ccc;
+    padding:1rem 0;
+  }
+.btn-kuliner{
+  background-color: #42bfa6;
+}
+
+/* tulis CSS Team kami dibawah */
+.lesson-wrapper-team {
+  position: relative;
+    padding-bottom: 80px;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: #f7f7f7;
+    text-align: center;
+  }
+  
+  .heading-team {
+    padding-top: 80px;
+    padding-bottom: 50px;
+    color: #5f5d60;
+  }
+  
+  .heading-team h2 {
+    font-weight: normal;
+  }
+  
+  .lesson-team {
+    float: left;
+    width: 20%;
+    padding: 0 20px;
+  }
+  .quote{
+    width: 60px;
+    height: 45px;
+  }
+  .lesson-team:hover .quote{
+    animation: quote 1s alternate;
+  }
+  @keyframes quote{
+    25%{
+      transform: rotate(90deg);
+    }
+    50%{
+      transform: rotate(180deg);
+    }
+    75%{
+      transform: rotate(270deg);
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+  }
+  .lesson-icon-team {
+    position: relative;
+  }
+  .lesson-icon-team img{
+    position: relative;
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+  .lesson-team p{
+    height: 150px;
+  }
+  .lesson-team h3{
+    line-height: 5px;
+  }
+  .lesson-team .normal{
+    font-weight: normal;
+  }
+
+
+
+
+/* footer */
+footer{
+  background-color: #344855;
+}
+.footer-top {
+  box-sizing: unset;
+    background-color: #344855;
+    border-top: 1px solid #eee;
+    /* background-color: white; */
+    color: #fff;
+    height: 120px;
+    padding: 40px;
+  }
+.footer-logo{
+  float: left;
+  font-size: 32px;
+}
+.footer-list{
+  float: right;
+}
+.footer-list li{
+  margin-right: 40px;
+}
+.follow-us{
+  float: right;
+}
+.follow-us a{
+  display: block;
+  color: white;
+  padding: 3px;
+}
+.follow-us a:hover .book{
+  margin: 0 auto;
+  padding: 5px;
+  background-color: #3b5998;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  color: white;
+}
+.follow-us a:hover .gram{
+  padding: 5px;
+  background-color: #c530a5;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  color: white;
+}
+.follow-us a:hover .tube{
+  padding: 5px;
+  background-color: #be2317;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  color: white;
+}
+
+.footer-copyright {
+    background-color: #2b3b46;
+    height: 60px;
+    color: #fff;
+    line-height: 60px;
+  }
+/* terbaru */
+  .footer-logo {
+    max-width: 250px;
+    max-height: 126px;
+  }
+    /*akhir footer  */
+
+
+/* message wrapper */
+.message-wrapper{
+  position: relative;
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+.heading{
+  padding-top: 60px;
+    margin-bottom: 30px;
+    color: #5f5d60;
+}
+.heading h2{
+  font-weight: normal;
+}
+.heading h3{
+  font-weight: normal;
+}
+.message{
+  padding: 15px 40px;
+    background-color: #42bfa6;
+    cursor: pointer;
+    box-shadow: 0 7px #1a7940;
+}
+
+.message:active{
+  position: relative;
+  top: 7px;
+  box-shadow: none;
+}
+
+/* terbaru */
+/* ilustrasi */
+.adventure-wrapper{
+  display: flex;
+}
+.adventure{
+  width: 100%;
+}
+.adventure img{
+  width: 100%;
+}
+/* akhir ilustrasi */
+
+/* contact */
+.contact-us-wrapper{
+  padding-bottom: 80px;
+}
+.heading h2{
+  text-align: center;
+}
+.contact-us{
+  display: flex;
+  justify-content: space-between;
+}
+.contact-form{
+  width: 100%;
+}
+.input-form .input{
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #dee7ec;
+  margin: 10px 0 20px 0;
+}
+.contact-img img{
+  width: 100%;
+  height: auto;
+}
+.contact-submit{
+  padding: 12px 24px;
+  width: 160px;
+  margin-top: 20px;
+  background-color: #42bfa6;
+  color: #fff;
+  border: 1px solid #dee7ec;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.sosmed-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 20px;
+}
+.sosmed .fab{
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  line-height: 50px;;
+  border-radius: 50%;
+  background-color: #42bfa6;
+  color: white;
+  font-size: 22px;
+}
+.sosmed:hover .fa-facebook-f{
+  color: #3b5998;
+  border: 2px solid #3b5998;
+  background-color: transparent;
+}
+
+.sosmed:hover .fa-twitter{
+  color: #00acee;
+  border: 2px solid #00acee;
+  background-color: transparent;
+}
+.sosmed:hover .fa-instagram{
+  color: #c530a5;
+  border: 2px solid #c530a5;
+  background-color: transparent;
+}
+.sosmed:hover .fa-whatsapp{
+  color: #25D366;
+  border: 2px solid #25D366;
+  background-color: transparent;
+}
+.destinasi-wrapper{
+  padding-bottom: 80px;
+}
+.adventure ul li{
+  list-style: square;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.adventure button{
+  border: none;
+}
+.btn-desc{
+  margin-top: 60px;
+}
